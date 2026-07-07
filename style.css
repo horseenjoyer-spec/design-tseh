@@ -1,0 +1,113 @@
+/* Независимое портфолио дизайн-услуг. Не использовать бренд/домены основного агентства. */
+:root {
+  --ink: #0F172A;
+  --paper: #F7F3EA;
+  --accent: #0E7C7B;
+  --steel: #64748B;
+  --card: #FFFFFF;
+  --tone: #E6F4F1;
+  --line: #D8D1C5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+/* Микроподпись — моно, разрядка */
+.kicker {
+  font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--steel);
+}
+
+/* Шапка */
+header.nav { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(242,238,231,0.92); backdrop-filter: none; z-index: 10; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.logo { display: flex; align-items: center; gap: 12px; font-family: "Montserrat"; font-weight: 700; font-size: 20px; }
+.logo .mark { width: 26px; height: 26px; }
+.nav-links { display: flex; gap: 26px; font-size: 15px; }
+.nav-links a:hover { color: var(--accent); }
+
+/* Герой — левый асимметричный */
+.hero { padding: 92px 0 72px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: end; }
+.hero h1 { font-family: "Montserrat"; font-weight: 800; font-size: 68px; line-height: 0.98; letter-spacing: -0.01em; }
+.hero h1 .o { color: var(--accent); }
+.hero .lead { font-size: 20px; color: var(--steel); max-width: 460px; margin-top: 4px; }
+.hero .grid-lines { position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px);
+  background-size: 100% 44px; opacity: 0.5; z-index: -1; }
+
+/* Секции */
+section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+h2 { font-family: "Montserrat"; font-weight: 700; font-size: 40px; line-height: 1.05; margin-bottom: 8px; }
+.section-head { margin-bottom: 40px; max-width: 640px; }
+.section-head p { color: var(--steel); font-size: 18px; margin-top: 12px; }
+
+/* Ниши — не три одинаковые карточки: разной ширины, с номерами */
+.niches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+.niche { background: var(--card); border: 1px solid var(--line); padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; transition: border-color .15s; }
+.niche:hover { border-color: var(--accent); }
+.niche.big { grid-column: span 3; }
+.niche.small { grid-column: span 3; }
+.niche .no { font-family: "JetBrains Mono", monospace; color: var(--accent); font-size: 14px; }
+.niche h3 { font-family: "Montserrat"; font-weight: 700; font-size: 24px; line-height: 1.1; }
+.niche p { color: var(--steel); font-size: 16px; }
+.niche .go { margin-top: auto; font-family: "JetBrains Mono", monospace; font-size: 14px; color: var(--ink); border-top: 1px solid var(--line); padding-top: 14px; }
+.niche .go span { color: var(--accent); }
+
+/* Галерея работ */
+.works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.work { background: var(--card); border: 1px solid var(--line); position: relative; overflow: hidden; }
+.work img { width: 100%; display: block; }
+.work .cap { padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+.work .demo { position: absolute; top: 12px; right: 12px; background: rgba(26,26,26,0.82); color: #fff; font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.1em; padding: 4px 8px; }
+.ph-tile { aspect-ratio: 3/4; background: var(--tone); display: flex; align-items: center; justify-content: center; }
+.ph-tile.wide { aspect-ratio: 16/9; }
+.ph-tile .t { font-family: "JetBrains Mono", monospace; color: var(--accent); font-size: 13px; letter-spacing: 0.12em; text-align: center; padding: 0 20px; }
+
+/* Пакеты цен — разные по высоте, средний выделен */
+.packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+.pack { background: var(--card); border: 1px solid var(--line); padding: 30px 26px; display: flex; flex-direction: column; }
+.pack.hot { border: 2px solid var(--accent); }
+.pack .plabel { font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--steel); }
+.pack .price { font-family: "Montserrat"; font-weight: 800; font-size: 40px; margin: 14px 0 6px; }
+.pack .price small { font-size: 18px; color: var(--steel); font-weight: 500; }
+.pack ul { list-style: none; margin: 18px 0 0; display: flex; flex-direction: column; gap: 10px; }
+.pack li { font-size: 15px; display: flex; gap: 12px; align-items: flex-start; }
+.pack li::before { content: ""; width: 8px; height: 8px; margin-top: 7px; background: var(--accent); flex: none; }
+.pack .tag-hot { display: inline-block; background: var(--accent); color: #fff; font-family: "JetBrains Mono", monospace; font-size: 12px; padding: 3px 10px; margin-bottom: 8px; align-self: flex-start; }
+
+/* Условия — строкой моно */
+.terms { display: flex; flex-wrap: wrap; gap: 12px 40px; margin-top: 32px; }
+.terms .t { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.terms .t::before { content: ""; width: 16px; height: 3px; background: var(--accent); flex: none; }
+.terms .t b { color: var(--accent); font-family: "JetBrains Mono", monospace; }
+
+/* CTA / контакт */
+.cta { background: var(--ink); color: var(--paper); }
+.cta h2 { color: var(--paper); }
+.cta .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+.cta p { color: #c9c4ba; font-size: 18px; margin-top: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 4px; }
+.btn:hover { filter: brightness(1.06); }
+.cta .mono { color: var(--steel); margin-top: 16px; font-size: 14px; }
+
+footer { padding: 40px 0; }
+footer .wrap { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--steel); flex-wrap: wrap; gap: 12px; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .cta .wrap { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 46px; }
+  .niches { grid-template-columns: 1fr; }
+  .niche.big, .niche.small { grid-column: auto; }
+  .works, .packs { grid-template-columns: 1fr; }
+  h2 { font-size: 30px; }
+}
