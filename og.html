@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>og-обложка Дизайн-цеха (служебная страница)</title>
+<!-- Служебный шаблон обложки для соцшаринга 1200×630. Не ссылается ниоткуда.
+     Перегенерация assets/og-image.png:
+     chromium --headless=new --no-sandbox --hide-scrollbars --window-size=1200,630 \
+       --screenshot=assets/og-image.png --virtual-time-budget=8000 file://$PWD/og.html -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Source+Sans+3:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root {
+  --ink: #0F172A;
+  --paper: #F7F3EA;
+  --accent: #0E7C7B;
+  --steel: #64748B;
+  --tone: #E6F4F1;
+  --line: #D8D1C5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1200px; height: 630px; overflow: hidden; }
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  background: var(--paper); color: var(--ink);
+  position: relative;
+}
+.grid-lines {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px);
+  background-size: 100% 52px; opacity: 0.45;
+}
+.corner { position: absolute; right: 0; top: 0; width: 300px; height: 100%; background: var(--tone); }
+.frame { position: absolute; inset: 26px; border: 1.5px solid var(--line); }
+.wrap { position: relative; height: 100%; padding: 64px 72px 56px; display: flex; flex-direction: column; justify-content: space-between; }
+.head { display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 16px; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 30px; }
+.logo svg { width: 44px; height: 44px; }
+.kicker {
+  font-family: "JetBrains Mono", monospace; font-size: 17px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--steel);
+}
+h1 { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 76px; line-height: 1.0; letter-spacing: -0.01em; max-width: 900px; }
+h1 .o { color: var(--accent); }
+.rows { display: flex; flex-direction: column; gap: 14px; }
+.row { display: flex; align-items: center; gap: 18px; }
+.row .bar { width: 36px; height: 5px; background: var(--accent); flex: none; }
+.row .txt { font-size: 27px; font-weight: 700; }
+.row .txt small { font-weight: 400; color: var(--steel); font-size: 24px; }
+.foot { display: flex; justify-content: space-between; align-items: baseline; }
+.terms { font-family: "JetBrains Mono", monospace; font-size: 18px; color: var(--steel); letter-spacing: 0.04em; }
+.tg { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 24px; color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="corner"></div>
+<div class="grid-lines"></div>
+<div class="frame"></div>
+<div class="wrap">
+  <div class="head">
+    <div class="logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect x="5" y="5" width="22" height="22" rx="6" stroke="#0E7C7B" stroke-width="3"/><path d="M10 22L22 10M15 10h7v7" stroke="#0E7C7B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Дизайн-цех</span>
+    </div>
+    <div class="kicker">дизайн для продаж</div>
+  </div>
+  <h1>Дизайн, который<br><span class="o">продаёт</span> товар</h1>
+  <div class="rows">
+    <div class="row"><div class="bar"></div><div class="txt">Карточки WB / Ozon и инфографика <small>· от 900 ₽</small></div></div>
+    <div class="row"><div class="bar"></div><div class="txt">Нейрофотосессия товара без студии <small>· от 2900 ₽</small></div></div>
+    <div class="row"><div class="bar"></div><div class="txt">Презентации и коммерческие предложения <small>· от 3900 ₽</small></div></div>
+  </div>
+  <div class="foot">
+    <div class="terms">первый вариант за 24 часа · 2 круга правок · чек самозанятого</div>
+    <div class="tg">t.me/Blessed_wisdom</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Знак «Дизайн-цех»: бирюзовый квадрат + стрелка вверх-вправо (рост). -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#0E7C7B"/>
+  <path d="M10 22L22 10M15 10h7v7" stroke="#F7F3EA" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
